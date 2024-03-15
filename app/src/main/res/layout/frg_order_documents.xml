@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:padding="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivDocumentImage"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="256dp"
+                    android:maxWidth="320dp"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/img_documents"
+                    android:scaleType="fitCenter"
+                    />
+
+                <TextView
+                    android:id="@+id/tvImageMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/no_document"
+                    android:textSize="@dimen/size_text_large"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnUpload"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:text="@string/choose_file"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="10dp"
+                />
+
+            <Spinner
+                android:id="@+id/spFileTyp"
+                android:prompt="@string/FileType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                />
+
+<com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            
+                android:layout_marginTop="@dimen/margin_normal"
+              
+                >
+  <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEingestellt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="eingestellt am"
+                    android:inputType="text"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:paddingLeft="@dimen/padding_normal"
+                    />
+      </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spArt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                />
+
+            <Spinner
+                android:id="@+id/spUnterart"
+                android:layout_width="match_parent"
+                android:prompt="@string/doc_type"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                />
+<com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            
+                android:layout_marginTop="@dimen/margin_normal"
+              
+                >
+  <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBezeichnung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Bezeichnung"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/padding_normal"
+                    />
+      </com.google.android.material.textfield.TextInputLayout>
+
+<com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            
+                android:layout_marginTop="@dimen/margin_normal"
+              
+                >
+  <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBeschreibung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Beschreibung"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/padding_normal"
+                    />
+      </com.google.android.material.textfield.TextInputLayout>
+
+<com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            
+                android:layout_marginTop="@dimen/margin_normal"
+              
+                >
+  <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etGültigAb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Gültig ab"
+                    android:inputType="textUri"
+                    android:paddingLeft="@dimen/padding_normal"
+                    />
+      </com.google.android.material.textfield.TextInputLayout>
+
+<com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            
+                android:layout_marginTop="@dimen/margin_normal"
+              
+                >
+  <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etGültigBis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Gültig bis"
+                    android:inputType="textUri"
+                    android:paddingLeft="@dimen/padding_normal"
+                    />
+      </com.google.android.material.textfield.TextInputLayout>
+
+<com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            
+                android:layout_marginTop="@dimen/margin_normal"
+              
+                >
+  <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWiedervorlage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Wiedervorlage"
+                    android:inputType="textUri"
+                    android:paddingLeft="@dimen/padding_normal"
+                    />
+      </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/cbGebrauchsanweisung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gebrauchsanweisung"
+                android:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/cbInstandhaltung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instandhaltung"
+                android:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/cbVermietung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vermietung"
+                android:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/cbBetriebsKosten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BetriebsKosten"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Aktualisieren"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

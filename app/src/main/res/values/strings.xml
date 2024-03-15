@@ -1,0 +1,119 @@
+<resources>
+    <!--<string name="app_name">Aufträge</string>-->
+    <string name="app_name">Aufträge</string>
+
+    <string name="title_activity_login">Anmeldung</string>
+
+    <!-- Strings related to login -->
+    <string name="username">Benutzername</string>
+    <string name="password">Passwort</string>
+    <string name="server">Server</string>
+    <string name="login_cap">ANMELDEN</string>
+    <string name="selected_date">Das ausgewählte Datum wird hier angezeigt.</string>
+    <string name="search_cap">Suchen</string>
+    <string name="temp"> [P_IObjekt_Auftraege_Planen] - Eintrag vom 15.1.2015 aufgrund des Instandhaltungsschemas Reinigung der Oberflächen </string>
+    <string name="no_record">Keine Aufträge gefunden</string>
+    <string name="no_document">Kein Dokument gefunden</string>
+    <string name="no_document_list">Keine Dokumente vorhanden</string>
+    <string name="status">Status</string>
+    <string name="choose_file">Dokument auswählen</string>
+    <string name="doc_type">Dokumenttyp</string>
+
+    <string name="type">Typ</string>
+    <string name="typeArt">Art*</string>
+    <string name="Leistungsart">Leistungsart</string>
+    <string name="typeArtNewOrder">Art des Auftrags*</string>
+    <string name="Ausführung">Ausführung</string>
+    <string name="Leistung">Leistung</string>
+    <string name="Beschreibung">Beschreibung</string>
+
+    <string name="Fehler">Fehler*</string>
+    <string name="SubtypeArt">Unterart</string>
+    <string name="Person">Melder*</string>
+
+    <string name="Melder">Person*</string>
+
+    <string name="Einheit">Einheit</string>
+    <string name="Material">Material</string>
+    <string name="AddOrderDetail">Auftrag hinzufügen</string>
+    <string name="add_service">Leistung hinzufügen</string>
+    <string name="Objekt">Objekt*</string>
+    <string name="no_services">Keine Leistungen vorhanden</string>
+    <string name="ArtdesAuftrags">Art des Auftrags*</string>
+    <string name="Priorität">Priorität</string>
+    <string name="Fehlerbild">Fehlerbild</string>
+    <string name="FileType">FileType</string>
+    <string name="AusstattungID">AusstattungID</string>
+    <string name="Leistungsbeschreibung">Leistungsbeschreibung</string>
+
+    <string-array name="array_menu">
+        <item>Startseite</item>
+        <item>Meine Aufträge</item>
+        <item>Auftrag suchen</item>
+        <item>Aufträge sortieren</item>
+        <item>QR-Code scannen</item>
+        <item>Anmelden</item>
+        <item>Beenden</item>
+    </string-array>
+
+    <string-array name="array_doctype">
+        <item>Dateiformat wählen</item>
+        <item>BMP</item>
+        <item>PNG</item>
+        <item>JPG</item>
+        <item>PDF</item>
+        <item>DOC</item>
+        <item>DOCX</item>
+        <item>TXT</item>
+        <item>PPT</item>
+        <item>RTF</item>
+    </string-array>
+
+    <string-array name="array_type">
+        <item>Dokumentart auswählen*</item>
+        <item>3D-Modell</item>
+        <item>Animation</item>
+        <item>Auftrag</item>
+        <item>CAD-Plan</item>
+        <item>Datenblatt</item>
+        <item>Formblatt</item>
+        <item>Foto</item>
+        <item>Handbuch</item>
+        <item>Kaufmännische Dokumentation</item>
+        <item>Protokoll</item>
+        <item>Rechnung</item>
+        <item>Sonstiges</item>
+        <item>Technische Dokumentation</item>
+        <item>Unterschrift</item>
+        <item>Verknüpfung</item>
+        <item>Vertrag</item>
+        <item>Video / Animation</item>
+    </string-array>
+
+    <string-array name="array_unterart">
+        <item>Dokumentunterart wählen</item>
+        <item>Gebäude-Modell</item>
+        <item>Objekt-Modell</item>
+        <item>Sonstiges Modell</item>
+    </string-array>
+
+    <string-array name="array_Priorität">
+        <item>Priorität*</item>
+        <item>Hoch</item>
+        <item>Mittel</item>
+        <item>Niedrig</item>
+    </string-array>
+
+    <string-array name="array_Beschreibung">
+        <item>Beschreibung</item>
+        <item>Auftrag gemäß Beschreibung ausgeführt </item>
+    </string-array>
+
+    <string-array name="array_status">
+        <item>Status*</item>
+        <item>Betrieb</item>
+        <item>defekt, laufend</item>
+        <item>defekt, ruhend</item>
+        <item>ruhend</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemAuftragNr"
+        android:title="AuftragNr (absteigend)"/>
+    <item
+        android:id="@+id/itemAuftragNrAsc"
+        android:title="AuftragNr (aufsteigend)"/>
+
+    <item
+        android:id="@+id/itemERPNr"
+        android:title="ERP-Nr (absteigend)"/>
+    <item
+        android:id="@+id/itemERPNrAsc"
+        android:title="ERP-Nr (aufsteigend)"/>
+
+    <item
+        android:id="@+id/itemObjekt"
+        android:title="Objekt (absteigend)"/>
+    <item
+        android:id="@+id/itemObjektAsc"
+        android:title="Objekt (aufsteigend)"/>
+    <item
+        android:id="@+id/itemFälligkeit"
+        android:title="Fälligkeit (absteigend)"/>
+    <item
+        android:id="@+id/itemFälligkeitAsc"
+        android:title="Fälligkeit (aufsteigend)"/>
+    <item
+        android:id="@+id/itemPlantermin"
+        android:title="Plantermin (absteigend)"/>
+    <item
+        android:id="@+id/itemPlanterminAsc"
+        android:title="Plantermin (aufsteigend)"/>
+
+
+</menu>

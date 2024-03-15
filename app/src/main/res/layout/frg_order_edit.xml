@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<Spinner-->
+            <!--android:id="@+id/spAusstattungID"-->
+            <!--style="@style/Widget.AppCompat.Spinner.Underlined"-->
+            <!--android:prompt="@string/AusstattungID"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="20dp" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.8">
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                       >
+
+
+                        <com.visafm.TextInputAutoCompleteTextView
+                            android:id="@+id/atvDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="5dp"
+                            android:completionThreshold="1"
+                            android:hint="@string/Objekt"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="#000000" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="0.2">
+
+                    <ImageView
+                        android:id="@+id/ivTextWithBarcode"
+                        android:layout_width="20dp"
+                        android:layout_gravity="center"
+                        android:layout_height="20dp"
+                        android:layout_alignRight="@+id/atvDropFloat"
+                        android:src="@drawable/img_barcode_blue" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/ArtdesAuftrags"
+                style="@style/InputLabel"/>
+
+            <Spinner
+                android:id="@+id/spArtdesAuftrags"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:prompt="@string/ArtdesAuftrags" />
+
+
+         <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:visibility="gone"
+       
+               >
+
+           <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etKST"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="KST"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/padding_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+         <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+       
+               >
+
+           <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBezeichnung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Bezeichnung:"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/padding_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+         <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+       
+               >
+
+           <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etKurzbezeichnung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Kurzbeschreibung:"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/padding_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+         <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+       
+               >
+
+           <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPlantermin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Plantermin:"
+                    android:inputType="textUri"
+                    android:paddingLeft="@dimen/padding_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+         <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+       
+               >
+
+           <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etfaelligkeit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Fälligkeit*:"
+                    android:inputType="textUri"
+                    android:paddingLeft="@dimen/padding_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+         <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+       
+               >
+
+           <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etZeitaufwand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789.,"
+                    android:hint="Zeitaufwand:"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="@dimen/padding_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+         <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+       
+               >
+
+           <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDatumStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Anfang:"
+                    android:inputType="textUri"
+                    android:paddingLeft="@dimen/padding_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+         <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+       
+               >
+
+           <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDatumEnde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ende:"
+                    android:inputType="textUri"
+                    android:paddingLeft="@dimen/padding_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/sFertigmeldung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Ausgeführt: "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </LinearLayout>
+
+         <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+       
+               >
+
+           <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etKosten"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789.,"
+                    android:hint="Kosten:"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="@dimen/padding_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+
+               >
+
+                <com.visafm.TextInputAutoCompleteTextView
+                    android:id="@+id/atvBeschreibung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:completionThreshold="1"
+                    android:hint="Leistungsbeschreibung:"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="#000000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Auftragsdaten speichern"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

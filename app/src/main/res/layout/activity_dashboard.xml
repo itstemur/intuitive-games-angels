@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_dimen"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivDrawerIndicator"
+            android:layout_width="@dimen/actionbar_dimen"
+            android:layout_height="@dimen/actionbar_dimen"
+            android:layout_gravity="start"
+            android:background="@drawable/drawer_selector"
+            android:scaleType="centerInside"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="start"
+            android:padding="18dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_left_arrow"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_normal"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <ImageView
+                android:id="@+id/ivDocument"
+                android:layout_width="@dimen/actionbar_ic_width"
+                android:layout_height="@dimen/actionbar_ic_height"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_document"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="@dimen/actionbar_ic_width"
+                android:layout_height="@dimen/actionbar_ic_height"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_edit"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivSortArrows"
+                android:layout_width="@dimen/actionbar_ic_width"
+                android:layout_height="@dimen/actionbar_ic_height"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/sort_by_alphabet"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivSortUp"
+                android:layout_width="@dimen/actionbar_ic_width"
+                android:layout_height="@dimen/actionbar_ic_height"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_sortup"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivSortDown"
+                android:layout_width="@dimen/actionbar_ic_width"
+                android:layout_height="@dimen/actionbar_ic_height"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_sortdown"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivService"
+                android:layout_width="@dimen/actionbar_ic_width"
+                android:layout_height="@dimen/actionbar_ic_height"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_tools"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivServiceEdit"
+                android:layout_width="@dimen/actionbar_ic_width"
+                android:layout_height="@dimen/actionbar_ic_height"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_orderdetail_edit"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivDocumnetEdit"
+                android:layout_width="@dimen/actionbar_ic_width"
+                android:layout_height="@dimen/actionbar_ic_height"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_writing"
+                android:visibility="gone" />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Content -->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/flDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/linearDrawerMenu"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <ExpandableListView
+                android:id="@+id/elvMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:groupIndicator="@null" />
+
+        </LinearLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

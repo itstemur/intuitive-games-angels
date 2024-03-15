@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#005B93</color>
+    <color name="colorPrimaryDark">#005184</color>
+    <color name="colorAccent">#000000</color>
+
+    <!--FF4081-->
+
+
+    <color name="homedarkgrey">#b4becc</color>
+    <color name="black">#000</color>
+    <color name="white">#ffff</color>
+    <color name="colorWave">#FF005B93</color>
+    <color name="colorfloat">#4D005B93</color>
+
+    <color name="txt_green">#008000</color>
+
+    <color name="txt_gray">#888</color>
+    <color name="txt_white">#ffffff</color>
+    <color name="VisaFm">#005b94</color>
+    <color name="light_gray">#c2c7cc</color>
+    <color name="dark_gray">#3d454c</color>
+    <color name="dark_gray_pressed">#373e44</color>
+    <color name="darker_gray">#1f2226</color>
+
+
+
+</resources>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:cardView="http://schemas.android.com/apk/res-auto"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="@dimen/padding_normal"
+	android:paddingRight="@dimen/padding_normal"
+	android:paddingLeft="@dimen/padding_normal"
+	>
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:cardUseCompatPadding="true"
+		cardView:cardCornerRadius="3dp"
+		cardView:cardElevation="1dp"
+		app:cardBackgroundColor="@color/white"
+		cardView:cardMaxElevation="1dp"
+		android:background="@android:color/white"
+		>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="@dimen/padding_normal"
+			 >
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:weightSum="6"
+				>
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="2"
+					android:text="Leistung Nr."
+					android:textColor="@android:color/black"
+					/>
+				<TextView
+					android:id="@+id/tvWDetailID"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="3.6"
+					android:textColor="@android:color/black"
+					/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:weightSum="6"
+				android:layout_marginTop="@dimen/padding_small"
+				>
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="2"
+					android:text="Leistung"
+					android:textColor="@android:color/black"
+					/>
+				<TextView
+					android:id="@+id/tvBeschreibung1"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="3.6"
+					android:textColor="@android:color/black"
+					/>
+			</LinearLayout>
+
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:weightSum="6"
+				android:layout_marginTop="@dimen/padding_small"
+				>
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="2"
+					android:text="Beschreibung"
+					android:textColor="@android:color/black"
+					/>
+				<TextView
+					android:id="@+id/tvBeschreibung2"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="3.6"
+					android:textColor="@android:color/black"
+					/>
+			</LinearLayout>
+
+
+
+
+			<!--<LinearLayout-->
+				<!--android:layout_width="match_parent"-->
+				<!--android:layout_height="wrap_content"-->
+				<!--android:orientation="horizontal"-->
+				<!--android:weightSum="6"-->
+				<!--android:layout_marginTop="@dimen/padding_small"-->
+				<!--&gt;-->
+				<!--<TextView-->
+					<!--android:layout_width="0dp"-->
+					<!--android:layout_height="wrap_content"-->
+					<!--android:layout_weight="2"-->
+					<!--android:text="BIS"-->
+					<!--android:textColor="@android:color/black"-->
+					<!--/>-->
+				<!--<TextView-->
+					<!--android:id="@+id/tvBIS"-->
+					<!--android:layout_width="0dp"-->
+					<!--android:layout_height="wrap_content"-->
+					<!--android:layout_weight="3.6"-->
+					<!--android:textColor="@android:color/black"-->
+					<!--/>-->
+			<!--</LinearLayout>-->
+
+			<!--<LinearLayout-->
+				<!--android:layout_width="match_parent"-->
+				<!--android:layout_height="wrap_content"-->
+				<!--android:orientation="horizontal"-->
+				<!--android:weightSum="6"-->
+				<!--android:layout_marginTop="@dimen/padding_small"-->
+				<!--&gt;-->
+				<!--<TextView-->
+					<!--android:layout_width="0dp"-->
+					<!--android:layout_height="wrap_content"-->
+					<!--android:layout_weight="2"-->
+					<!--android:text="Von"-->
+					<!--android:textColor="@android:color/black"-->
+					<!--/>-->
+				<!--<TextView-->
+					<!--android:id="@+id/tvVon"-->
+					<!--android:layout_width="0dp"-->
+					<!--android:layout_height="wrap_content"-->
+					<!--android:layout_weight="3.6"-->
+					<!--android:textColor="@android:color/black"-->
+					<!--/>-->
+			<!--</LinearLayout>-->
+
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+
+			<ImageView
+				android:id="@+id/IvServiceOptions"
+				android:layout_width="40dp"
+				android:layout_height="50dp"
+				android:layout_gravity="right"
+				android:paddingTop="10dp"
+				android:paddingBottom="20dp"
+				android:paddingLeft="10dp"
+				android:clickable="true"
+				android:src="@drawable/ic_options_menu" />
+
+		</LinearLayout>
+
+		<ImageView
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:src="@drawable/ic_arrow_right"
+			android:layout_gravity="right|center"
+			android:paddingRight="@dimen/padding_small"
+			/>
+
+	 </androidx.cardview.widget.CardView>
+
+</FrameLayout>
