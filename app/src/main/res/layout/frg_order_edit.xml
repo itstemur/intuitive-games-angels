@@ -45,7 +45,7 @@
                        >
 
 
-                        <com.visafm.TextInputAutoCompleteTextView
+                        <com.visafm.roombook.TextInputAutoCompleteTextView
                             android:id="@+id/atvDrop"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -272,7 +272,7 @@
 
                >
 
-                <com.visafm.TextInputAutoCompleteTextView
+                <com.visafm.roombook.TextInputAutoCompleteTextView
                     android:id="@+id/atvBeschreibung"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

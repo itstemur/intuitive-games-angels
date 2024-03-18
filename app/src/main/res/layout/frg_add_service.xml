@@ -35,7 +35,7 @@
           
            >
 v
-            <com.visafm.TextInputAutoCompleteTextView
+            <com.visafm.roombook.TextInputAutoCompleteTextView
                 android:id="@+id/atvLeistung"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

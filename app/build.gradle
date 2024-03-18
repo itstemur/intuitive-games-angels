@@ -6,7 +6,7 @@ android {
     buildToolsVersion '30.0.3'
 
     defaultConfig {
-        applicationId "com.visafm"
+        applicationId "com.visafm.roombook"
         minSdkVersion 19
         targetSdkVersion 33
         versionCode 19
