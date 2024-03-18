@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 33
@@ -42,6 +43,13 @@ dependencies {
     implementation 'com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.5'
     implementation "androidx.activity:activity:1.5.0"
     implementation "androidx.fragment:fragment:1.5.0"
+
+    // kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // networking
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     // Date-time-Picker
     implementation 'com.wdullaer:materialdatetimepicker:3.1.3'
