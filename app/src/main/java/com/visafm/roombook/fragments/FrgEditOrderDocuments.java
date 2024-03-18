@@ -717,7 +717,7 @@ public class FrgEditOrderDocuments extends Fragment implements BaseClass, DatePi
         setArtTypeList(jObj.getString("docFK_TlkpDocTypes"));
         Log.v("", jObj.getString("docFK_TlkpDocTypeOptions"));
         StrUnterartType = jObj.getString("docFK_TlkpDocTypeOptions");
-        Common.stopProgressDialouge("getLeistungArt");
+        Common.stopProgressDialouge();
 
 
     }
@@ -760,7 +760,7 @@ public class FrgEditOrderDocuments extends Fragment implements BaseClass, DatePi
 
         if (requestedFor.equals("getDocType")) {
             {
-//                Common.stopProgressDialouge(requestedFor);
+//                Common.stopProgressDialouge();
                 JSONObject jObj = new JSONObject(response);
                 if (jObj.getString("ResultCode").equals("SUCCESS")) {
                     JSONArray jArrayDocTypeList = jObj.getJSONArray("ResultObject");
@@ -773,7 +773,7 @@ public class FrgEditOrderDocuments extends Fragment implements BaseClass, DatePi
 
         if (requestedFor.equals("getArt")) {
             {
-//                Common.stopProgressDialouge(requestedFor);
+//                Common.stopProgressDialouge();
                 JSONObject jArtObj = new JSONObject(response);
                 if (jArtObj.getString("ResultCode").equals("SUCCESS")) {
                     JSONArray jArrayArtList = jArtObj.getJSONArray("ResultObject");
@@ -787,7 +787,7 @@ public class FrgEditOrderDocuments extends Fragment implements BaseClass, DatePi
         }
 
         if (requestedFor.equals("UpdateDocument")) {
-//            Common.stopProgressDialouge(requestedFor);
+//            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
             if (jObj.getString("ResultCode").equals("SUCCESS")) {
                 showAlert(jObj.getString("ResultMessage"));
@@ -798,7 +798,7 @@ public class FrgEditOrderDocuments extends Fragment implements BaseClass, DatePi
 
         if (requestedFor.equals("getUnterart")) {
             {
-//                Common.stopProgressDialouge(requestedFor);
+//                Common.stopProgressDialouge();
                 JSONObject jSubArtObj = new JSONObject(response);
                 if (jSubArtObj.getString("ResultCode").equals("SUCCESS")) {
                     JSONArray jArrayArtList = jSubArtObj.getJSONArray("ResultObject");
@@ -810,7 +810,7 @@ public class FrgEditOrderDocuments extends Fragment implements BaseClass, DatePi
         }
 
         if (requestedFor.equals("UploadFile")) {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
             if (jObj.getString("ResultCode").equals("SUCCESS")) {
 

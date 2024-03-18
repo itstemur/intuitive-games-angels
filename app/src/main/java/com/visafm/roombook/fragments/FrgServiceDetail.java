@@ -343,19 +343,19 @@ public class FrgServiceDetail extends Fragment implements BaseClass {
                                                 tvMaterialArt.setText("");
                                                 switch (loader) {
                                                     case "getLeistungArtloader":
-                                                        Common.stopProgressDialouge("getLeistungArt");
+                                                        Common.stopProgressDialouge();
                                                         break;
                                                     case "getLeistungloader":
-                                                        Common.stopProgressDialouge("getLeistung");
+                                                        Common.stopProgressDialouge();
                                                         break;
                                                     case "getEinheitloader":
-                                                        Common.stopProgressDialouge("getEinheit");
+                                                        Common.stopProgressDialouge();
                                                         break;
                                                     case "getPersonloader":
-                                                        Common.stopProgressDialouge("getPerson");
+                                                        Common.stopProgressDialouge();
                                                         break;
                                                     case "getMaterialloader":
-                                                        Common.stopProgressDialouge("getMaterial");
+                                                        Common.stopProgressDialouge();
                                                         break;
                                                 }
                                             } else {
@@ -398,19 +398,19 @@ public class FrgServiceDetail extends Fragment implements BaseClass {
                                         tvMaterialArt.setText("");
                                         switch (loader) {
                                             case "getLeistungArtloader":
-                                                Common.stopProgressDialouge("getLeistungArt");
+                                                Common.stopProgressDialouge();
                                                 break;
                                             case "getLeistungloader":
-                                                Common.stopProgressDialouge("getLeistung");
+                                                Common.stopProgressDialouge();
                                                 break;
                                             case "getEinheitloader":
-                                                Common.stopProgressDialouge("getEinheit");
+                                                Common.stopProgressDialouge();
                                                 break;
                                             case "getPersonloader":
-                                                Common.stopProgressDialouge("getPerson");
+                                                Common.stopProgressDialouge();
                                                 break;
                                             case "getMaterialloader":
-                                                Common.stopProgressDialouge("getMaterial");
+                                                Common.stopProgressDialouge();
                                                 break;
                                         }
                                     } else {
@@ -465,19 +465,19 @@ public class FrgServiceDetail extends Fragment implements BaseClass {
                                             tvMaterialArt.setText("");
                                             switch (loader) {
                                                 case "getLeistungArtloader":
-                                                    Common.stopProgressDialouge("getLeistungArt");
+                                                    Common.stopProgressDialouge();
                                                     break;
                                                 case "getLeistungloader":
-                                                    Common.stopProgressDialouge("getLeistung");
+                                                    Common.stopProgressDialouge();
                                                     break;
                                                 case "getEinheitloader":
-                                                    Common.stopProgressDialouge("getEinheit");
+                                                    Common.stopProgressDialouge();
                                                     break;
                                                 case "getPersonloader":
-                                                    Common.stopProgressDialouge("getPerson");
+                                                    Common.stopProgressDialouge();
                                                     break;
                                                 case "getMaterialloader":
-                                                    Common.stopProgressDialouge("getMaterial");
+                                                    Common.stopProgressDialouge();
                                                     break;
                                             }
                                         } else {
@@ -508,19 +508,19 @@ public class FrgServiceDetail extends Fragment implements BaseClass {
                                     tvMaterialArt.setText("");
                                     switch (loader) {
                                         case "getLeistungArtloader":
-                                            Common.stopProgressDialouge("getLeistungArt");
+                                            Common.stopProgressDialouge();
                                             break;
                                         case "getLeistungloader":
-                                            Common.stopProgressDialouge("getLeistung");
+                                            Common.stopProgressDialouge();
                                             break;
                                         case "getEinheitloader":
-                                            Common.stopProgressDialouge("getEinheit");
+                                            Common.stopProgressDialouge();
                                             break;
                                         case "getPersonloader":
-                                            Common.stopProgressDialouge("getPerson");
+                                            Common.stopProgressDialouge();
                                             break;
                                         case "getMaterialloader":
-                                            Common.stopProgressDialouge("getMaterial");
+                                            Common.stopProgressDialouge();
                                             break;
                                     }
                                 } else {
@@ -566,19 +566,19 @@ public class FrgServiceDetail extends Fragment implements BaseClass {
                                     tvMaterialArt.setText("");
                                     switch (loader) {
                                         case "getLeistungArtloader":
-                                            Common.stopProgressDialouge("getLeistungArt");
+                                            Common.stopProgressDialouge();
                                             break;
                                         case "getLeistungloader":
-                                            Common.stopProgressDialouge("getLeistung");
+                                            Common.stopProgressDialouge();
                                             break;
                                         case "getEinheitloader":
-                                            Common.stopProgressDialouge("getEinheit");
+                                            Common.stopProgressDialouge();
                                             break;
                                         case "getPersonloader":
-                                            Common.stopProgressDialouge("getPerson");
+                                            Common.stopProgressDialouge();
                                             break;
                                         case "getMaterialloader":
-                                            Common.stopProgressDialouge("getMaterial");
+                                            Common.stopProgressDialouge();
                                             break;
                                     }
                                 } else {
@@ -625,19 +625,19 @@ public class FrgServiceDetail extends Fragment implements BaseClass {
                                         tvMaterialArt.setText("");
                                         switch (loader) {
                                             case "getLeistungArtloader":
-                                                Common.stopProgressDialouge("getLeistungArt");
+                                                Common.stopProgressDialouge();
                                                 break;
                                             case "getLeistungloader":
-                                                Common.stopProgressDialouge("getLeistung");
+                                                Common.stopProgressDialouge();
                                                 break;
                                             case "getEinheitloader":
-                                                Common.stopProgressDialouge("getEinheit");
+                                                Common.stopProgressDialouge();
                                                 break;
                                             case "getPersonloader":
-                                                Common.stopProgressDialouge("getPerson");
+                                                Common.stopProgressDialouge();
                                                 break;
                                             case "getMaterialloader":
-                                                Common.stopProgressDialouge("getMaterial");
+                                                Common.stopProgressDialouge();
                                                 break;
                                         }
                                     } else {
@@ -662,19 +662,19 @@ public class FrgServiceDetail extends Fragment implements BaseClass {
                                 tvMaterialArt.setText("");
                                 switch (loader) {
                                     case "getLeistungArtloader":
-                                        Common.stopProgressDialouge("getLeistungArt");
+                                        Common.stopProgressDialouge();
                                         break;
                                     case "getLeistungloader":
-                                        Common.stopProgressDialouge("getLeistung");
+                                        Common.stopProgressDialouge();
                                         break;
                                     case "getEinheitloader":
-                                        Common.stopProgressDialouge("getEinheit");
+                                        Common.stopProgressDialouge();
                                         break;
                                     case "getPersonloader":
-                                        Common.stopProgressDialouge("getPerson");
+                                        Common.stopProgressDialouge();
                                         break;
                                     case "getMaterialloader":
-                                        Common.stopProgressDialouge("getMaterial");
+                                        Common.stopProgressDialouge();
                                         break;
                                 }
                             } else {
@@ -706,19 +706,19 @@ public class FrgServiceDetail extends Fragment implements BaseClass {
 
                             switch (loader) {
                                 case "getLeistungArtloader":
-                                    Common.stopProgressDialouge("getLeistungArt");
+                                    Common.stopProgressDialouge();
                                     break;
                                 case "getLeistungloader":
-                                    Common.stopProgressDialouge("getLeistung");
+                                    Common.stopProgressDialouge();
                                     break;
                                 case "getEinheitloader":
-                                    Common.stopProgressDialouge("getEinheit");
+                                    Common.stopProgressDialouge();
                                     break;
                                 case "getPersonloader":
-                                    Common.stopProgressDialouge("getPerson");
+                                    Common.stopProgressDialouge();
                                     break;
                                 case "getMaterialloader":
-                                    Common.stopProgressDialouge("getMaterial");
+                                    Common.stopProgressDialouge();
                                     break;
                             }
                             tvMaterialArt.setText(jObjMaterial.getString("Bezeichnung").toString().trim());
@@ -728,19 +728,19 @@ public class FrgServiceDetail extends Fragment implements BaseClass {
                 } else {
                     switch (loader) {
                         case "getLeistungArtloader":
-                            Common.stopProgressDialouge("getLeistungArt");
+                            Common.stopProgressDialouge();
                             break;
                         case "getLeistungloader":
-                            Common.stopProgressDialouge("getLeistung");
+                            Common.stopProgressDialouge();
                             break;
                         case "getEinheitloader":
-                            Common.stopProgressDialouge("getEinheit");
+                            Common.stopProgressDialouge();
                             break;
                         case "getPersonloader":
-                            Common.stopProgressDialouge("getPerson");
+                            Common.stopProgressDialouge();
                             break;
                         case "getMaterialloader":
-                            Common.stopProgressDialouge("getMaterial");
+                            Common.stopProgressDialouge();
                             break;
                     }
                 }

@@ -126,7 +126,7 @@ public class FrgDocList extends Fragment implements BaseClass, View.OnClickListe
     @Override
     public void httpResponse(String response, String requestedFor) {
         try {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             if (requestedFor.equals("getOrderDocumentsList")) {
                 mWaveSwipeRefreshLayout.setRefreshing(false);
                 JSONObject jObj = new JSONObject(response);

@@ -107,7 +107,7 @@ public class HttpConnection extends AsyncTask<String, String, String>
 			}
 			else
 			{
-				Common.stopProgressDialouge(requestedfor);
+				Common.stopProgressDialouge();
                 Common.myLog("HttpConnection", "New Response:" + outPut);
 				Common.showAlert(context, Common.TECHNICAL_PROBLEM);
                 delegate.httpFailure(outPut, requestedfor);
@@ -115,7 +115,7 @@ public class HttpConnection extends AsyncTask<String, String, String>
 		} catch (Exception e)
 		{
 			e.printStackTrace();
-			Common.stopProgressDialouge(requestedfor);
+			Common.stopProgressDialouge();
 		}
 	}
 
@@ -169,7 +169,7 @@ public class HttpConnection extends AsyncTask<String, String, String>
 		}
 		catch (Exception e)
 		{
-			Common.stopProgressDialouge(requestedfor);
+			Common.stopProgressDialouge();
 			e.printStackTrace();
 			return "Exception";
 		}

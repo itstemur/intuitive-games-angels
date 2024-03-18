@@ -287,7 +287,7 @@ public class FrgSearchOrder extends Fragment implements BaseClass, DatePickerDia
 
             }
         });
-        Common.stopProgressDialouge("getAusstattungID");
+        Common.stopProgressDialouge();
 
     }
 
@@ -504,7 +504,7 @@ public class FrgSearchOrder extends Fragment implements BaseClass, DatePickerDia
     @Override
     public void httpResponse(String response, String requestedFor) throws Exception {
         if (requestedFor.equals("getSearchList")) {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
             if (jObj.getString("ResultCode").equals("SUCCESS")) {
                 jArraySearchList = jObj.getJSONArray("ResultObject");

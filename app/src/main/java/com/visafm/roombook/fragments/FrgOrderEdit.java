@@ -745,7 +745,7 @@ public class FrgOrderEdit extends Fragment implements BaseClass, DatePickerDialo
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spArtdesAuftrags.setAdapter(adapter);
         fillBeschreibungSpinner(getActivity(), BeschreibungJArray);
-        Common.stopProgressDialouge("getAusstattungID");
+        Common.stopProgressDialouge();
     }
 
 
@@ -1047,9 +1047,9 @@ public class FrgOrderEdit extends Fragment implements BaseClass, DatePickerDialo
     public void httpResponse(String response, String requestedFor) throws Exception {
 
 
-        Common.stopProgressDialouge(requestedFor);
+        Common.stopProgressDialouge();
         if (requestedFor.equals("UpdateOrder")) {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
             if (jObj.getString("ResultCode").equals("SUCCESS")) {
                 showAlert(jObj.getString("ResultMessage"));
@@ -1060,7 +1060,7 @@ public class FrgOrderEdit extends Fragment implements BaseClass, DatePickerDialo
         }
 
         if (requestedFor.equals("getOrderDetail")) {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
             if (jObj.getString("ResultCode").equals("SUCCESS")) {
                 jObjOrderDetailTemp = jObj.getJSONObject("ResultObject");
@@ -1074,7 +1074,7 @@ public class FrgOrderEdit extends Fragment implements BaseClass, DatePickerDialo
 
         if (requestedFor.equals("getAusstattungID")) {
             {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 JSONObject jAusstattungObj = new JSONObject(response);
                 if (jAusstattungObj.getString("ResultCode").equals("SUCCESS")) {
                     JSONArray jArrayAusstattungList = jAusstattungObj.getJSONArray("ResultObject");

@@ -771,7 +771,7 @@ public class FrgEditService extends Fragment implements BaseClass, DatePickerDia
                 spEinheit.setSelection(m);
             }
         }
-        Common.stopProgressDialouge("getLeistungArt");
+        Common.stopProgressDialouge();
     }
 
 }

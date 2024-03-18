@@ -271,7 +271,7 @@ public class FrgOrderDetail extends Fragment implements BaseClass {
     public void httpResponse(String response, String requestedFor) throws Exception {
 
         if (requestedFor.equals("getOrderDetail")) {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
             if (jObj.getString("ResultCode").equals("SUCCESS")) {
                 jObjTemp = jObj.getJSONObject("ResultObject");

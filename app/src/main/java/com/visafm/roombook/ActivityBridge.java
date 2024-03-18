@@ -1,4 +1,4 @@
-package com.visafm.roombook.roombook;
+package com.visafm.roombook;
 
 import android.net.Uri;
 

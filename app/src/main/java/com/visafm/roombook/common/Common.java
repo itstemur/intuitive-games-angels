@@ -67,6 +67,12 @@ import java.util.regex.Pattern;
 @SuppressWarnings("deprecation")
 @SuppressLint({"InflateParams", "SimpleDateFormat"})
 public class Common {
+    public final static String KEY_BASE_URL = "base_url";
+    public final static String KEY_APPLICATION_ID = "application_id";
+    public final static String KEY_USERNAME = "username";
+    public final static String KEY_PASSWORD = "password";
+    public final static String KEY_USER_SESSION = "user_session";
+
     private static Context context;
     public static String SERVER_URL;
     public static JSONObject selectedOrderDetail;
@@ -180,7 +186,7 @@ public class Common {
         }
     }
 
-    public static void stopProgressDialouge(String from) {
+    public static void stopProgressDialouge() {
         try {
             loader.dismiss();
         } catch (Exception e) {

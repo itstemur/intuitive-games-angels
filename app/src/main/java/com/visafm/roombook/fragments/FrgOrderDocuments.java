@@ -627,7 +627,7 @@ public class FrgOrderDocuments extends Fragment implements BaseClass, DatePicker
 
         if (requestedFor.equals("getDocType")) {
             {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 JSONObject jObj = new JSONObject(response);
                 if (jObj.getString("ResultCode").equals("SUCCESS")) {
                     JSONArray jArrayDocTypeList = jObj.getJSONArray("ResultObject");
@@ -640,7 +640,7 @@ public class FrgOrderDocuments extends Fragment implements BaseClass, DatePicker
 
         if (requestedFor.equals("getArt")) {
             {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 JSONObject jArtObj = new JSONObject(response);
                 if (jArtObj.getString("ResultCode").equals("SUCCESS")) {
                     JSONArray jArrayArtList = jArtObj.getJSONArray("ResultObject");
@@ -654,7 +654,7 @@ public class FrgOrderDocuments extends Fragment implements BaseClass, DatePicker
         }
 
         if (requestedFor.equals("SaveDocument")) {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
             if (jObj.getString("ResultCode").equals("SUCCESS")) {
                 showAlert(jObj.getString("ResultMessage"));
@@ -665,7 +665,7 @@ public class FrgOrderDocuments extends Fragment implements BaseClass, DatePicker
 
         if (requestedFor.equals("getSubArtType")) {
             {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 JSONObject jSubArtObj = new JSONObject(response);
                 if (jSubArtObj.getString("ResultCode").equals("SUCCESS")) {
                     JSONArray jArrayArtList = jSubArtObj.getJSONArray("ResultObject");
@@ -677,7 +677,7 @@ public class FrgOrderDocuments extends Fragment implements BaseClass, DatePicker
         }
 
         if (requestedFor.equals("UploadFile")) {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
             if (jObj.getString("ResultCode").equals("SUCCESS")) {
 

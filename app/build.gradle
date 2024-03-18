@@ -47,9 +47,15 @@ dependencies {
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    // rxjava
+    implementation "io.reactivex.rxjava3:rxjava:3.1.2"
+    implementation "io.reactivex.rxjava3:rxandroid:3.0.0"
+
     // networking
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "com.squareup.retrofit2:adapter-rxjava3:2.9.0"
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
     // Date-time-Picker
     implementation 'com.wdullaer:materialdatetimepicker:3.1.3'

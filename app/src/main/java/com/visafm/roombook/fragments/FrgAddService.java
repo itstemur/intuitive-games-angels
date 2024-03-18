@@ -437,7 +437,7 @@ public class FrgAddService extends Fragment implements BaseClass, DatePickerDial
                 break;
             }
         }
-        Common.stopProgressDialouge("getLeistungArt");
+        Common.stopProgressDialouge();
     }
 
     private void fillLeistung() throws Exception {

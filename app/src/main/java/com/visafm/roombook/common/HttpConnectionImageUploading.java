@@ -126,13 +126,13 @@ public class HttpConnectionImageUploading extends AsyncTask<String, String, Stri
                 if (isDelegate)
                     delegate.httpResponse(outPut, requestedfor);
             } else {
-                Common.stopProgressDialouge(requestedfor);
+                Common.stopProgressDialouge();
                 Common.myLog("HttpConnection", "New Response:" + outPut);
                 Common.showAlert(context, "There is some technical problem.");
             }
         } catch (Exception e) {
             e.printStackTrace();
-            Common.stopProgressDialouge(requestedfor);
+            Common.stopProgressDialouge();
         }
     }
 
@@ -192,7 +192,7 @@ public class HttpConnectionImageUploading extends AsyncTask<String, String, Stri
             } else
                 return "Exception";
         } catch (Exception e) {
-            Common.stopProgressDialouge(requestedfor);
+            Common.stopProgressDialouge();
             e.printStackTrace();
             return "Exception";
         }

@@ -542,9 +542,9 @@ public class FrgNewOrderEdit extends Fragment implements BaseClass, DatePickerDi
 
     @Override
     public void httpResponse(String response, String requestedFor) throws Exception {
-        Common.stopProgressDialouge(requestedFor);
+        Common.stopProgressDialouge();
         if (requestedFor.equals("UpdateOrder")) {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
             if (jObj.getString("ResultCode").equals("SUCCESS")) {
                 DisplayAlert(jObj.getString("ResultMessage"));
@@ -556,7 +556,7 @@ public class FrgNewOrderEdit extends Fragment implements BaseClass, DatePickerDi
 
         if (requestedFor.equals("BindCommonDropDown")) {
             {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 JSONObject jObj = new JSONObject(response);
                 if (jObj.getString("ResultCode").equals("SUCCESS")) {
                     JSONObject tempjobj = jObj.getJSONObject("ResultObject");
@@ -576,7 +576,7 @@ public class FrgNewOrderEdit extends Fragment implements BaseClass, DatePickerDi
         }
 
         if (requestedFor.equals("getDetails")) {
-//            Common.stopProgressDialouge(requestedFor);
+//            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
 
             JSONObject resultObject = jObj.getJSONObject("ResultObject");

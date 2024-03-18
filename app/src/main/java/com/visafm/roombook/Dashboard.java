@@ -864,7 +864,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     @Override
     public void httpResponse(String response, String requestedFor) throws Exception {
         try {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             if (requestedFor.equals("getSortMenuList")) {
                 JSONObject jObj = new JSONObject(response);
                 if (jObj.getString("ResultCode").equals("SUCCESS")) {
@@ -900,7 +900,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         if (requestedFor.equals("deleteOrderDetailsByID")) {
 
             try {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 if (requestedFor.equals("deleteOrderDetailsByID")) {
                     JSONObject jObj = new JSONObject(response);
                     if (jObj.getString("ResultCode").equals("SUCCESS")) {
@@ -918,7 +918,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
         if (requestedFor.equals("getOrderDocumentsList")) {
             try {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 JSONObject documentjObj = new JSONObject(response);
                 if (documentjObj.getString("ResultCode").equals("SUCCESS")) {
                     jArrayDocList = documentjObj.getJSONArray("ResultObject");
@@ -942,7 +942,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
         if (requestedFor.equals("getOrderDetailsList")) {
             try {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 JSONObject jObj = new JSONObject(response);
                 if (jObj.getString("ResultCode").equals("SUCCESS")) {
                     jArrayServiceList = jObj.getJSONArray("ResultObject");
@@ -967,7 +967,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         if (requestedFor.equals("deleteOrder")) {
 
             try {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 if (requestedFor.equals("deleteOrder")) {
                     JSONObject jObj = new JSONObject(response);
                     if (jObj.getString("ResultCode").equals("SUCCESS")) {
@@ -984,7 +984,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         if (requestedFor.equals("getOrderList")) {
 
             try {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 JSONObject orderjObj = new JSONObject(response);
                 if (orderjObj.getString("ResultCode").equals("SUCCESS")) {
                     jArrayOrderList = orderjObj.getJSONArray("ResultObject");
@@ -1010,7 +1010,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         if (requestedFor.equals("DeleteDocument")) {
 
             try {
-                Common.stopProgressDialouge(requestedFor);
+                Common.stopProgressDialouge();
                 if (requestedFor.equals("DeleteDocument")) {
                     JSONObject jObj = new JSONObject(response);
                     if (jObj.getString("ResultCode").equals("SUCCESS")) {

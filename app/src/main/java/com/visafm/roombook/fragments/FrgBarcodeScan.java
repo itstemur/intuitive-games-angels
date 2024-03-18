@@ -109,7 +109,7 @@ public class FrgBarcodeScan extends Fragment implements BaseClass {
     public void httpResponse(String response, String requestedFor) throws Exception {
 
         try {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             if (requestedFor.equals("createOrder")) {
                 JSONObject jObj = new JSONObject(response);
                 if (jObj.getString("ResultCode").equals("SUCCESS")) {

@@ -530,9 +530,9 @@ public class FrgOrderAdd extends Fragment implements BaseClass, DatePickerDialog
     
     @Override
     public void httpResponse(String response, String requestedFor) throws Exception {
-        Common.stopProgressDialouge(requestedFor);
+        Common.stopProgressDialouge();
         if (requestedFor.equals("InsertOrder")) {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             JSONObject jObj = new JSONObject(response);
             if (jObj.getString("ResultCode").equals("SUCCESS")) {
                 showAlert(jObj.getString("ResultMessage"));
@@ -638,7 +638,7 @@ public class FrgOrderAdd extends Fragment implements BaseClass, DatePickerDialog
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spArtdesAuftrags.setAdapter(adapter);
         fillBeschreibungSpinner(getActivity(), BeschreibungJArray);
-        Common.stopProgressDialouge("getAusstattungID");
+        Common.stopProgressDialouge();
     }
 
     @Override

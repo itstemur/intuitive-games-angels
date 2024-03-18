@@ -108,7 +108,7 @@ public class FrgBarcodeSearch extends Fragment implements BaseClass {
     public void httpResponse(String response, String requestedFor) throws Exception {
 
         try {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             if (requestedFor.equals("barcodesearch")) {
                 JSONObject jObj = new JSONObject(response);
                 if (jObj.getString("ResultCode").equals("SUCCESS")) {

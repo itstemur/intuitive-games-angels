@@ -172,7 +172,7 @@ public class FrgSortList extends Fragment implements BaseClass {
     public void httpResponse(String response, String requestedFor) {
 
         try {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             if (requestedFor.equals("getSOrderList")) {
                 JSONObject jObj = new JSONObject(response);
                 if (jObj.getString("ResultCode").equals("SUCCESS")) {

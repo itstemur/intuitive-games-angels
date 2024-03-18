@@ -2,25 +2,27 @@ package com.visafm.roombook;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.visafm.roombook.common.BaseClass;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.visafm.roombook.common.Common;
-import com.visafm.roombook.common.HttpConnection;
+import com.visafm.roombook.data.factory.RepoFactory;
+import com.visafm.roombook.data.remote.network.RetrofitClient;
+import com.visafm.roombook.data.repository.SharedPreferencesRepository;
+import com.visafm.roombook.data.repository.UserRepository;
 
-import org.json.JSONObject;
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
-import java.util.HashMap;
-
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener, BaseClass {
-
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    SharedPreferencesRepository sharedPref;
+    UserRepository userRepository;
     Button btnLogin;
-    BaseClass delegate = this;
     EditText etUsername;
     EditText etPassword;
     EditText etServer;
@@ -34,27 +36,33 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         etServer = findViewById(R.id.etServer);
         btnLogin = findViewById(R.id.btnLogin);
 
-        if (Common.getSharedPreferences(getApplicationContext(), "previousUsername").equals("NA")) {
-            //Local
-//          etUsername.setText("Wolfgang Kaiser");
-//            etPassword.setText("P:M3n4VUm(r^>Z");
-//            etServer.setText("http://aab8259f.ngrok.io");
+        // initialize repositories
+        sharedPref = RepoFactory.INSTANCE.createSharedPref(this);
 
-//            etUsername.setText("Hemali Parekh");
-//            etServer.setText("http://8c786713.ngrok.io");
-//            etPassword.setText("5OpH+SyWn5CFg3");
 
-//            Live
-//            etUsername.setText("Wolfgang Kaiser");
-//            etPassword.setText("Nrn{_zgY1@3siSZUv");
-//            etServer.setText(" https://mobile.visa-fm-raumbuch.de/");
-        } else {
-            etUsername.setText(Common.getSharedPreferences(getApplicationContext(), "previousUsername"));
-            etPassword.setText(Common.getSharedPreferences(getApplicationContext(), "previousPassword"));
-            etServer.setText(Common.getSharedPreferences(getApplicationContext(), "previousServer"));
+
+        if (!Common.getSharedPreferences(getApplicationContext(), "previousUsername").equals("NA")) {
+            etUsername.setText(sharedPref.getString(Common.KEY_USERNAME, ""));
+            etPassword.setText(sharedPref.getString(Common.KEY_PASSWORD, ""));
+            etServer.setText(sharedPref.getString(Common.KEY_BASE_URL, ""));
         }
 
         btnLogin.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (compositeDisposable == null || compositeDisposable.isDisposed())
+            compositeDisposable = new CompositeDisposable();
+    }
+
+    @Override
+    protected void onStop() {
+        if (!compositeDisposable.isDisposed())
+            compositeDisposable.dispose();
+
+        super.onStop();
     }
 
     @Override
@@ -68,56 +76,54 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void checkValidation() {
         if (Common.isValidEdittext(etUsername, 0) && Common.isValidEdittext(etPassword, 0) && Common.isValidEdittext(etServer, 0)) {
-            Common.SERVER_URL = etServer.getText().toString().trim() + "/api/";
-            getLogin();
-        }
-        /*Common.SERVER_URL = "http://5.175.13.128:90/api/";
-        getLogin();*/
-    }
+            // save the url
+            String baseUrl = etServer.getText().toString().trim() + "/api/";
+            sharedPref.putString(Common.KEY_BASE_URL, baseUrl);
 
-    private void getLogin() {
-        try {
-            HashMap<String, String> postDataParams = new HashMap<>();
-            postDataParams.put("username", etUsername.getText().toString().trim());
-            postDataParams.put("password", etPassword.getText().toString().trim());
-            HttpConnection httpConnection = new HttpConnection(delegate, LoginActivity.this);
-            httpConnection.setRequestedfor("login");
-            httpConnection.setIsloading(true);
-            httpConnection.setPostDataParams(postDataParams);
-            httpConnection.setUrl("Account/ApplicantLogin");
-            httpConnection.execute("");
-        } catch (Exception e) {
-            e.printStackTrace();
+            // initialized retrofit
+            RetrofitClient.INSTANCE.init(baseUrl, "");
+            userRepository = RepoFactory.INSTANCE.getUserRemoteRepository();
+
+            // login
+            login();
         }
     }
 
-    @Override
-    public void httpResponse(String response, String requestedFor) throws Exception {
-        Common.stopProgressDialouge(requestedFor);
-        if (requestedFor.equals("login")) {
-            JSONObject jObj = new JSONObject(response);
-            if (jObj.getString("ResultCode").equals("SUCCESS")) {
-                String strTypes = jObj.getString("ResultObject");
-                JSONObject jObjt = new JSONObject(strTypes);
-                Common.USER_SESSION = jObjt.getString("SessionUserID");
-                Common.APPLICATIONID = jObjt.getString("SessionApplicationID");
-                Common.setSharedPreferences(getApplicationContext(), "userSession", Common.USER_SESSION);
-                Common.setSharedPreferences(getApplicationContext(), "serverUrl", Common.SERVER_URL);
-                Common.setSharedPreferences(getApplicationContext(), "previousUsername", etUsername.getText().toString().trim());
-                Common.setSharedPreferences(getApplicationContext(), "previousPassword", etPassword.getText().toString().trim());
-                Common.setSharedPreferences(getApplicationContext(), "previousServer", etServer.getText().toString().trim());
-                Intent i = new Intent(LoginActivity.this, Dashboard.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(i);
-            } else {
-                Common.showAlert(LoginActivity.this, jObj.getString("ResultMessage"));
-            }
-        }
-    }
+    private void login() {
+        String username = etUsername.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
 
-    @Override
-    public void httpFailure(String response, String requestedFor) throws Exception {
-    }
+        Common.startProgressDialouge(this, "");
+        compositeDisposable.add(
+                userRepository.login(username, password)
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeOn(Schedulers.io())
+                        .subscribe(response -> {
+                            Common.stopProgressDialouge();
 
+                            if (response.getResultCode().equals("SUCCESS")) {
+                                String sessionUserID = response.getResultObject().getSessionUserID();
+                                String sessionApplicationID = response.getResultObject().getSessionApplicationID();
+
+                                // Save session user ID and application ID to SharedPreferences
+                                sharedPref.putString(Common.KEY_USER_SESSION, sessionUserID);
+                                sharedPref.putString(Common.KEY_APPLICATION_ID, sessionApplicationID);
+                                sharedPref.putString(Common.KEY_USERNAME, username);
+                                sharedPref.putString(Common.KEY_PASSWORD, password);
+
+
+                                // Start Dashboard activity
+                                Intent intent = new Intent(this, Dashboard.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intent);
+                            } else {
+                                // Show alert with result message
+                                Common.showAlert(this, response.getResultMessage());
+                            }
+                        }, error -> {
+                            Common.stopProgressDialouge();
+                        })
+        );
+    }
 }
 

@@ -188,7 +188,7 @@ public class FrgDocumentDetail extends Fragment implements BaseClass {
             } else {
                 tvdocValidTo.setText("-");
             }
-            Common.stopProgressDialouge("getArt");
+            Common.stopProgressDialouge();
 
         } catch (Exception e) {
             e.printStackTrace();

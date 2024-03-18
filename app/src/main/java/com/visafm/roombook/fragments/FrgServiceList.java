@@ -120,7 +120,7 @@ public class FrgServiceList extends Fragment implements BaseClass, View.OnClickL
     @Override
     public void httpResponse(String response, String requestedFor) {
         try {
-            Common.stopProgressDialouge(requestedFor);
+            Common.stopProgressDialouge();
             if (requestedFor.equals("getOrderDetailsList")) {
                 mWaveSwipeRefreshLayout.setRefreshing(false);
                 JSONObject jObj = new JSONObject(response);
